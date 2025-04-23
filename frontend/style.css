@@ -1,0 +1,47 @@
+/* style.css */
+body {
+    font-family: Trebuchet MS, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F0FFF0;
+}
+
+header {
+    background-color: #8FBC8F;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+header nav {
+    margin-top: 10px;
+}
+
+header nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+input {
+    padding: 10px;
+    margin: 5px;
+    width: 100%;
+    max-width: 300px;
+}
+
+button {
+    padding: 10px;
+    background-color: #FFE4E1;
+    color: #000000;
+    border: none;
+    cursor: pointer;
+}
