@@ -32,14 +32,22 @@ section {
 }
 
 input {
-    padding: 10px;
-    margin: 5px;
-    width: 100%;
-    max-width: 300px;
+        border: 1px solid #8FBC8F;
+        border-radius: 15px;         
+        font-size: 16px;
+        background-color: #E8F5E9;
+        color: #2F4F4F;
+        margin-top: 10px;
+        width: 100%;
+        max-width: 400px;
+        box-sizing: border-box;
+        padding: 15px;
 }
 
 button {
-    padding: 10px;
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 15px;
     background-color: #FFE4E1;
     color: #000000;
     border: none;

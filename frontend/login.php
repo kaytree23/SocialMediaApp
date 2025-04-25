@@ -1,4 +1,4 @@
-<!-- loging.php -->
+<!-- login.php -->
 
 <h2>Login to Connect</h2>
 
@@ -12,7 +12,7 @@
     <label for="password">Password:</label>
     <input type="password" id="password" name="password" required><br><br>
 
-    <buttom type="submit" class="button">Login</button>
+    <button type="submit" class="button">Login</button>
 </form>
 
 <!--Forgot password link-->
