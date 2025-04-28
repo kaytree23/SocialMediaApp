@@ -19,3 +19,5 @@
 <p style="margin-top: 20px;">
     <a href="forgot_password.php">Forgot your password?</a>
 </p>
+
+<?php include 'footer.php'; ?>
