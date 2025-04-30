@@ -9,5 +9,5 @@ if($data != ""){
 
 if(isset($data->action) && $data->action == "like_post")
 {
-	include "ajax/like.ajax.php";
+	include __DIR__ . "/../../app/like.ajax.php";
 }

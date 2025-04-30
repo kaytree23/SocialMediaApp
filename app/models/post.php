@@ -1,3 +1,4 @@
+<!-- Post class for handling posts in the application. -->
 <?php 
 
 class Post
