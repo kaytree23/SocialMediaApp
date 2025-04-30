@@ -1,37 +1,49 @@
 /* style.css */
-body {
+
+body 
+{
     font-family: Trebuchet MS, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #F0FFF0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
-header {
+header 
+{
     background-color: #8FBC8F;
     color: white;
     padding: 1rem;
     text-align: center;
 }
 
-header nav {
+header nav 
+{
     margin-top: 10px;
 }
 
-header nav a {
+header nav a 
+{
     color: white;
     margin: 0 15px;
     text-decoration: none;
 }
 
-main {
+main 
+{
     padding: 20px;
 }
 
-section {
+section 
+{
     margin-bottom: 30px;
 }
 
-input {
+input 
+{
         border: 1px solid #8FBC8F;
         border-radius: 15px;         
         font-size: 16px;
@@ -44,7 +56,8 @@ input {
         padding: 15px;
 }
 
-button {
+button 
+{
     padding: 15px;
     font-size: 16px;
     border-radius: 15px;
@@ -52,4 +65,35 @@ button {
     color: #000000;
     border: none;
     cursor: pointer;
+}
+
+.login-container
+{
+    background-color:#FFFFFF;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    max-width: 90%;
+}
+
+.error-message 
+{
+    color: red;
+    font-size: 14px;
+    text-align: center
+}
+
+.links
+{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.links a 
+{
+    color: #2F4F4F;
+    display: block;
+    text-decoration: none;
+    margin: 5px 0;
 }

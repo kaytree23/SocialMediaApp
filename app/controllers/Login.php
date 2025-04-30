@@ -1,3 +1,5 @@
+<!-- Login.php -->
+ <!-- Handles login class -->
 <?php
 
 class Login
@@ -14,7 +16,7 @@ class Login
 		$query = "select * from users where email = '$email' limit 1 ";
 
 		$DB = new Database();
-		$result = $DB->read($query);
+		$result = $DB->read("SELECT * FROM users WHERE email = 'email' LIMIT 1");
 
 		if($result)
 		{
