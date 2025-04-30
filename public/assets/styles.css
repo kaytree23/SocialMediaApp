@@ -77,6 +77,13 @@ button
     max-width: 90%;
 }
 
+.success-message 
+{
+    color: green;
+    font-size: 14px;
+    text-align: center
+}
+
 .error-message 
 {
     color: red;

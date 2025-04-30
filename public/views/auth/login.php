@@ -20,43 +20,34 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && $_POST['user_action'] === 'user_log
         exit;
     } 
 }
+
+$title = "Login"; // Set the page title
+include(__DIR__ . '/../shared/header.php');
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Login</title>
-    <link rel="stylesheet" href="public/assets/styles.css">
-</head>
+<div class = "login-container">
+    <h2>Login to Connect</h2>
 
-<body>
-    <?php include 'header.php'; ?>
-    <div class = "login-container">
-        <h2>Login to Connect</h2>
+    <form action="<?= htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
+        <input type="hidden" name="user_action" value="user_login">
 
-        <form action="login.php" method="post">
-            <input type="hidden" name="user_action" value="user_login">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required><br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
 
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required><br><br>
+        <button type="submit" class="button">Login</button>
+    </form>
 
-            <button type="submit" class="button">Login</button>
-        </form>
+    <?php if ($error): ?>
+        <p class="error-message"><?php echo $error; ?></p>
+    <?php endif; ?>
 
-        <?php if ($error): ?>
-            <p style="color:red;"><?php echo $error; ?></p>
-        <?php endif; ?>
-
-        <div class = "links">
-            <a href = "forgot_password.php">Forgot your password?</a>
-            <a href = "register.php">Don't have an account? Register here</a>
-        </div>
+    <div class = "links">
+        <a href = "forgot_password.php">Forgot your password?</a>
+        <a href = "register.php">Don't have an account? Register here</a>
     </div>
-</body>
-</html>
+</div>
 
-<?php include 'footer.php'; ?>
+<?php include(__DIR__ . '/../shared/footer.php'); ?>

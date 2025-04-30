@@ -40,46 +40,40 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && $_POST['user_action'] === 'user_reg
         }
     }
 }
+
+$title = "Sign Up"; // Set the page title
+include(__DIR__ . '/../shared/header.php');
 ?>
+<div class="login-container">
+    <h2>Create an Account</h2>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Sign Up</title>
-    <link rel="stylesheet" href="public/assets/styles.css">
-</head>
-<body>
-    <div class="login-container">
-        <h2>Create an Account</h2>
+    <form action="signup.php" method="post">
+        <input type="hidden" name="user_action" value="user_register">
 
-        <form action="signup.php" method="post">
-            <input type="hidden" name="user_action" value="user_register">
+        <label for="first_name">First Name:</label>
+        <input type="text" id="first_name" name="first_name" required>
 
-            <label for="first_name">First Name:</label>
-            <input type="text" id="first_name" name="first_name" required>
+        <label for="last_name">Last Name:</label>
+        <input type="text" id="last_name" name="last_name" required>
 
-            <label for="last_name">Last Name:</label>
-            <input type="text" id="last_name" name="last_name" required>
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required>
 
-            <label for="email">Email Address:</label>
-            <input type="email" id="email" name="email" required>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
 
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
+        <button type="submit" class="button">Sign Up</button>
+    </form>
 
-            <button type="submit" class="button">Sign Up</button>
-        </form>
+    <?php if ($error): ?>
+        <p class="error-message"><?php echo $error; ?></p>
+    <?php elseif ($success): ?>
+        <p class="success-message"><?php echo $success; ?></p>
+    <?php endif; ?>
 
-        <?php if ($error): ?>
-            <p class="error-message"><?php echo $error; ?></p>
-        <?php elseif ($success): ?>
-            <p style="color: green; text-align: center;"><?php echo $success; ?></p>
-        <?php endif; ?>
-
-        <div class="links">
-            <a href="login.php">Already have an account? Log in here</a>
-        </div>
+    <div class="links">
+        <a href="login.php">Already have an account? Log in here</a>
     </div>
-</body>
-</html>
+</div>
+
+<?php include(__DIR__ . '/../shared/footer.php');
