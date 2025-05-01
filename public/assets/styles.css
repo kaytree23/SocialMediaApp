@@ -58,6 +58,7 @@ input
 
 button 
 {
+    margin-top: 10px;
     padding: 15px;
     font-size: 16px;
     border-radius: 15px;
@@ -197,3 +198,125 @@ button
     background-color: #76a678;
 }
 
+/* Homepage Welcome Section */
+.welcome-section {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 40px 20px;
+    background-color: #E8F5E9;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.welcome-section h1 {
+    font-size: 2.5rem;
+    color: #2F4F4F;
+    margin-bottom: 10px;
+}
+
+.welcome-section p {
+    font-size: 1.1rem;
+    color: #4B7063;
+}
+
+/* Feature Cards Section */
+.features-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.feature {
+    background-color: #FFFFFF;
+    border: 1px solid #8FBC8F;
+    border-radius: 15px;
+    padding: 25px;
+    width: 300px;
+    max-width: 90%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    text-align: center;
+}
+
+.feature h2 {
+    color: #2F4F4F;
+    margin-bottom: 10px;
+}
+
+.feature p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* Button reused globally */
+.button 
+{
+    background-color: #8FBC8F;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 15px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #76a678;
+}
+
+/* Container for layout */
+.page-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+/* Sidebar navigation */
+.sidebar {
+    background-color: #8FBC8F;
+    color: white;
+    padding: 20px;
+    border-radius: 15px;
+    min-width: 220px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.sidebar li {
+    margin: 10px 0;
+}
+
+.sidebar .button {
+    margin-top: 20px;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #FFE4E1;
+    color: black;
+    border-radius: 15px;
+    text-decoration: none;
+}
+
+/* Login form area */
+.login-container {
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+}
+
+/* Align footer center */
+footer {
+    text-align: center;
+    margin-top: 60px;
+}

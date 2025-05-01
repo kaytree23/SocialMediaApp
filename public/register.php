@@ -1,7 +1,7 @@
 <?php 
 session_start(); // Start the session to use session variables
 
-include("config/db.php"); // Include the database connection file
+include(__DIR__ . '/../config/db.php');
 
 $error = ""; // Initialize an error variable
 $success = ""; // Initialize a success variable
@@ -42,7 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && $_POST['user_action'] === 'user_reg
 }
 
 $title = "Sign Up"; // Set the page title
-include(__DIR__ . '/../shared/header.php');
+include(__DIR__ . '/header.php');
 ?>
 <div class="login-container">
     <h2>Create an Account</h2>
@@ -76,4 +76,5 @@ include(__DIR__ . '/../shared/header.php');
     </div>
 </div>
 
-<?php include(__DIR__ . '/../shared/footer.php');
+<?php include(__DIR__ . '/footer.php');       
+

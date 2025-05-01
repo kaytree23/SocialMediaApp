@@ -1,7 +1,7 @@
 <!-- index.php -->
  <?php
  $title = "Home";
- include("public/header.php");
+ include(__DIR__ . '/public/header.php'); 
 ?>
 
 <main>
@@ -14,14 +14,15 @@
         <div class="feature">
             <h2>Login</h2>
             <p>Already a member? Sign in to stay Connected.</p>
-            <a href="login.php" class="button">Login</a>
+            <a href="public/login.php" class="button">Login</a>
         </div>
 
         <div class="feature">
             <h2>Create an Account</h2>
             <p>New here? Join us and start connecting with friends.</p>
-            <a href="register.php" class="button">Sign Up</a>
+            <a href="public/register.php" class="button">Sign Up</a>
         </div>
     </section>
 </main>
-<?php include("public/footer.php"); ?>
+
+<?php include(__DIR__ . '/public/footer.php'); ?>

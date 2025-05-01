@@ -2,8 +2,8 @@
 <?php
 session_start(); // Start the session to use session variables
 
-include("app/controllers/Login.php"); // Include the Login class
-include("config/db.php"); // Include the database connection file
+include(__DIR__ . '/../app/controllers/Login.php');
+include(__DIR__ . '/../config/db.php');
 
 $login = new Login(); // Create an instance of the Login class
 $error = ""; // Initialize an error variable
@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && $_POST['user_action'] === 'user_log
 }
 
 $title = "Login"; // Set the page title
-include(__DIR__ . '/../shared/header.php');
+include(__DIR__ . '/header.php');
 ?>
 
 <div class = "login-container">
@@ -50,4 +50,4 @@ include(__DIR__ . '/../shared/header.php');
     </div>
 </div>
 
-<?php include(__DIR__ . '/../shared/footer.php'); ?>
+<?php include(__DIR__ . '/footer.php'); ?>
